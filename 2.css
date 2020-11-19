@@ -1,0 +1,345 @@
+@import url(./font/stylesheet.css);
+
+:root{
+    --font:'Gilroy';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 2rem 4rem;
+    font-family: var(--font);
+    color: white;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    background: url(./Untitled-1.jpg) center no-repeat;
+    background-size: cover;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    animation: down 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+.navi{
+    display: flex;
+    list-style: none;
+}
+
+.navitem a{
+    text-decoration: none;
+    padding: 0 3rem;
+    color: white;
+    font-family: var(--font);
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    transition: font-weight 0.5s;
+}
+
+.active{
+    font-weight: bold !important;
+}
+
+.btn input{
+    width: 17rem;
+    color: white;
+    font-family: var(--font);
+    font-weight: normal;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border:1.7px white solid ;
+    border-radius: 20px;
+    transform: translateY(-0.5rem);
+}
+
+.btn input:focus{
+    outline: none;
+}
+
+.btn{
+    position: relative;
+}
+
+a:visited{
+    color: white;
+}
+
+.btn i{
+    font-size: 1rem;
+    position: absolute;
+    right: 15px;
+    top: 2px;
+}
+.head
+{
+    font-family: var(--font);
+    font-weight: bolder;
+    font-size: 2.3rem;
+    color: white;
+    letter-spacing: 0.3rem;
+    margin-top: 5rem;
+    opacity: 0;
+    animation: left 0.5s forwards;
+    animation-delay: 0.7s;
+}
+
+.head span{
+    /* display: block; */
+    font-weight: normal;
+}
+
+.imdb h6{
+    width: fit-content;
+    padding:0.1rem 0.8rem;
+    background: rgb(255, 230, 0);
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.imdb{
+    margin-top: 1.5rem;
+    display: flex;
+    opacity: 0;
+    animation: op 1s forwards;
+    animation-delay: 1s;
+}
+
+.imdb h5{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    color: white;
+    padding: 0.1rem 1.3rem;
+    font-weight: lighter;
+    
+}
+
+.imdb span{
+    font-weight: bold;
+}
+
+.about{
+    width: 50%;
+    margin-top:3rem ;
+    color: white;
+    font-family: var(--font);
+    font-weight: 300;
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: op 1s forwards;
+    animation-delay: 1s;
+}
+
+.pw{
+    display: flex;
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    opacity: 0;
+    animation: size 0.5s forwards;
+    animation-delay: 1.2s;
+}
+
+.pw h1{
+    
+    padding-right: 8rem;
+}
+
+.play,
+.watch{
+    display: flex;
+}
+.play i,
+.watch i{
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 0.8rem;
+    border: 1.5px white solid;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-right: 1.2rem;
+    transform: translateY(-0.2rem);
+    transition: color 0.5s;
+    transition: background 0.5s;
+}
+.play a,
+.watch a{
+    display: flex;
+    text-decoration: none;
+}
+
+.btm-navi a{
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    margin-right: 2.5rem;
+    font-weight: bold;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 20px;
+    transition: color 0.5s;
+    transition: background 0.5s;
+}
+
+.btm-navi:last-child a{
+    margin-right: 0;
+}
+
+.btm-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7rem;
+}
+
+.active-btm a{
+    background: white;
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+
+.navitem a:hover{
+    font-weight: bold;
+}
+
+.btm-navi a:hover{
+    background: white;
+    color: black;
+}
+
+.play i:hover,
+.watch i:hover{
+    background: white;
+    color: black;
+}
+
+.btm{
+    opacity: 0;
+    animation: sizey 1s forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes left {
+    0%{
+        transform: translateX(-10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+@keyframes down {
+    0%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+@keyframes op {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes size {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes sizey {
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .container{
+        padding-left: 1rem ;
+        padding-right: 1rem ;
+        overflow: hidden;
+    }
+    .navitem a{
+        padding: 0 0.5rem;
+        font-size: 0.7rem;
+    }
+    .navi{
+        justify-content: space-between;
+    }
+    .nav{
+        display: block;
+    }
+
+    .btn input{
+        transform: translateY(1.5rem);
+    }
+    .btn i{
+        position: initial;
+        transform: translate(-2rem,2rem);
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .head{
+        margin-top: 8rem;
+        font-size: 1rem;
+    }
+    .head span{
+        display: inline;
+    }
+
+    .about{
+        width: 100%;
+    }
+    .play h1,
+    .watch h1{
+        font-size: 1rem;
+        padding-right: 4rem;
+        transform: translateY(3px);
+    }
+
+    .btm{
+        margin-top: 3rem;
+    }
+    .btm-nav{
+        margin-top: 2rem;
+    }
+    .btm-navi a{
+        padding: 0.3rem 0.5rem;
+        margin: 0;
+    }
+    .home{
+        background: url(./5.jpg) center no-repeat;
+        background-size: cover;
+    }
+}
+
